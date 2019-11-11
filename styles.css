@@ -1,0 +1,280 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*------------------Body------------------*/
+
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 
+    "section section section"
+    "main main main";
+}
+
+#white-star-img {
+  height: 40px;
+  width: 40px;
+}
+
+/*-------------------Nav-------------------*/
+
+nav {
+  color: #FFFFFF;
+  background-color: #1F1F3D;
+  grid-area: nav;
+}
+
+#hamburger {
+  display: none;
+}
+
+img {
+  height: 30px;
+}
+
+section { 
+  padding: 0 5%;
+  border-bottom: 2px solid #F8B229;
+}
+
+h1 {
+  color: #F8B229;
+  text-align: center;
+}
+
+.nav-btns {
+  height: 40px;
+  width: 100%;
+  color: #E9E9F3;
+  font-size: 1.3em;
+  margin: 25px auto;
+  background-color: #5356A4;
+  border-color: #353567;
+  border-radius: 3px;
+}
+
+h2 {
+  font-size: .9em;
+  font-weight: 400;
+  margin: 20px 0 0 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+li {
+  font-size: 1.2em;
+  padding: 5px 0;
+}
+
+#new-quality-label {
+  font-size: .9em;
+  margin-bottom: 5px;
+  display: block;
+}
+
+#new-quality-input {
+  height: 40px;
+  width: 100%;
+  color: #353567;
+  font-size: 1em;
+  border: 1px solid #353567;
+}
+
+/*-----------------Idea Form----------------*/
+
+#idea-submission {
+  padding: 10px 0;
+  background-color: green;
+  display: flex;
+  grid-area: section;
+}
+
+.idea-form-label {
+  color: #F8B229;
+  font-size: .8em;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+form {
+  height: 90%;
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#idea-title-input {
+  height: 40px;
+  color: #353567;
+  font-size: 1em;
+  margin-bottom: 15px;
+  border: 1px solid #F8B229;
+}
+
+#idea-body-input {
+  height: 80px;
+  color: #353567;
+  font-size: 1em;
+  border: 1px solid #F8B229;
+}
+
+#save-btn {
+  height: 40px;
+  color: #FFFFFF;
+  font-size: 1em;
+  font-weight: 700;
+  margin: 20px 0;
+  background-color: #F8B229;
+  border: 1px solid #F8B229;
+}
+
+#save-btn:disabled {
+  background-color: lightgrey;
+}
+
+.search {
+  height: 40px;
+  text-align: center;
+  display: flex;
+}
+
+#search-btn {
+  height: 40px;
+  width: 10%;
+  padding: 2%;
+  background-color: #353567;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+#search-input {
+  height: 40px;
+  width: 90%;
+  color: #353567;
+  font-size: 1em;
+  margin: 0;
+  padding: 5px;
+  border: 1px solid #5356A4;
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+::placeholder {
+  color: #5356A4;
+}
+
+.round-corners {
+  border-radius: 3px;
+}
+
+/*------------------------Main-----------------------*/
+
+#main {
+  padding: 20px;
+  background-color: #EAEAF4;
+  display: grid;
+  grid-area: main;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card {
+  min-width: 200px;
+  border: 1px solid #6E646B;
+}
+
+#user-prompt-text {
+  min-height: 328px;
+  color: #aaaaaa;
+  text-align: center;
+  margin: auto;
+  padding: 40px;
+  border: 2px dotted #aaaaaa;
+}
+
+.hidden{
+  display: none;
+}
+
+#card-body {
+  height: 74%;
+  color: #1F1F3D;
+  padding: 20px 15px 20px 15px;
+  background-color: #FFFFFF;
+}
+
+header {
+  height: 13%;
+  background-color: #1F1F3D;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#idea-title-output {
+  height: 50px;
+  max-width: 24ch;
+  width: 100%;
+  font-size: 1em;
+  margin: 0;
+  overflow: scroll;
+}
+
+#idea-body-output {
+  height: 150px;
+  max-width: 24ch;
+  font-size: 1em;
+  margin: 0;
+  overflow: scroll;
+}
+
+footer {
+  height: 13%;
+  color: #FFFFFF;
+  background-color: #5356A4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#white-x-img {
+  height: 40px;
+  width: 40px;
+  background: url(images/delete.svg) no-repeat;
+}
+
+#white-x-img:hover {
+  background: url(images/delete-active.svg) no-repeat;
+}
+
+#white-upvote-img {
+  height: 40px;
+  width: 40px;
+  background: url(images/upvote.svg) no-repeat;
+}
+
+#white-upvote-img:hover {
+  background: url(images/upvote-active.svg) no-repeat;
+}
+
+#white-downvote-img {
+  height: 40px;
+  width: 40px;
+  background: url(images/downvote.svg) no-repeat;
+}
+
+#white-downvote-img:hover {
+  background: url(images/downvote-active.svg) no-repeat;
+}
