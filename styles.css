@@ -188,11 +188,13 @@ form {
   grid-area: main;
   grid-gap: 20px;
   grid-template-columns: repeat(3, 1fr);
+  overflow: scroll;
 }
 
 .card {
+  height: 328px;
   min-width: 200px;
-  border: 1px solid #6E646B;
+  border: 1px solid #F8B229;
 }
 
 #user-prompt-text {
@@ -209,7 +211,7 @@ form {
 }
 
 #card-body {
-  height: 74%;
+  height: 87%;
   color: #1F1F3D;
   padding: 20px 15px 20px 15px;
   background-color: #FFFFFF;
@@ -217,7 +219,7 @@ form {
 
 header {
   height: 13%;
-  background-color: #1F1F3D;
+  background-color: green;
   display: flex;
   align-items: center;
   justify-content: space-between;
