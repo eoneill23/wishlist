@@ -11,24 +11,11 @@ var mobileNav = document.querySelector('.mobileNav');
 var ideas = JSON.parse(localStorage.getItem('ideasArray')) || [];
 var qualities = ['Swill', 'Plausible', 'Genius'];
 
-// titleInput.addEventListener('keyup', enableSaveBtn);
-// bodyInput.addEventListener('keyup', enableSaveBtn);
-saveBtn.addEventListener('click', handleSaveButton);
+//savebtn add event listener click handlesavebtn
 mainContent.addEventListener('click', clickHandler);
 mainContent.addEventListener('focusout', updateContent);
 mainContent.addEventListener('keydown', enterUpdateContent);
 window.addEventListener('load', mapLocalStorage(ideas));
-
-// function enableSaveBtn() {
-//   saveBtn.disabled = false;
-//   disableSaveBtn();
-// };
-
-// function disableSaveBtn() {
-//   if (titleInput.value === '' || bodyInput.value === '') {
-//     saveBtn.disabled = true;
-//   }
-// };
 
 function mapLocalStorage(oldIdeas) {
   var newIdeas = oldIdeas.map(function(object) {
@@ -175,17 +162,5 @@ function downvoteBtn(event) {
     var cardIndex = getCardIndex(cardId); 
     ideas[cardIndex].updateQuality('down');
     document.querySelector(`.card[data-id="${cardId}"] span`).innerText = qualities[ideas[cardIndex].quality];
-  }
-};
-
-function toggleMobileNav(event) {
-  if (mobileNav.classList.contains('unHide')) {
-    var menu = 'images/menu.svg';
-    mobileNav.classList.remove('unHide');
-    burger.src = menu;
-  } else if (mobileNav.classList !== 'unHide') {
-    var xButton = 'images/menu-close.svg';
-    mobileNav.classList.add('unHide');
-    burger.src = xButton;
   }
 };
