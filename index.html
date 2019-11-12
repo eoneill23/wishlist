@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Christmas Wishlist</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <section id="idea-submission">
+    <form>
+      <h1>Christmas Wishlist</h1>
+      <label class="idea-form-label round-corners" for="idea-title-input">Title</label>
+      <input type="text" id="idea-title-input" class="round-corners" maxlength="50">
+      <label class="idea-form-label round-corners" for="idea-body-input">Body</label>
+      <textarea type="text" id="idea-body-input" class="round-corners" maxlength="120" style="resize: none"></textarea>
+      <button id="save-btn" class="round-corners">Save</button>
+    </form>
+  </section>
+  <main id="main">
+    <p id="user-prompt-text">Enter something you'd like for Christmas with a title in the form above and click "Save" to save your idea and make it appear here!</p>
+  </main>
+</body>
+<script type="text/javascript" src="idea.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>
